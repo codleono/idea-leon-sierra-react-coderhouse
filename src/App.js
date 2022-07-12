@@ -2,6 +2,32 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const condition = false
+  if (condition) {
+    console.log('VERDADERO')
+    
+  }else{
+    console.log('FALSO')
+  }
+  condition ? console.log('VERDADERO') : console.log('FALSO')
+
+  // spread oprador 
+  const numeros =  [1,2,3,4,5]
+  const letras =  ['a','b','c','d','e']
+
+  // key dinamica
+  // asiganacion de desctruccion
+  const persona = {
+    nombre: 'leon',
+    edad: 30
+  }
+  const{nombre, edad, nacionalidad = 'indefinida'}= persona
+  const { edad: edad2} = persona
+  console.log(nombre)
+  console.log(edad)
+  console.log(nacionalidad.edad)
+  console.log(edad2)
+  
   return (
     <div className="App">
       <header className="App-header">
