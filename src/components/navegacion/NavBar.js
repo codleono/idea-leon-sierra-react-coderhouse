@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget"
+//import "bootstrap/dist/css/bootstrap.min.css";
+
 const NavBar = () => {
   return (
     <div>
@@ -22,17 +25,24 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                  <Link className="nav-link" to='/'>Inicio</Link>
-                
+                <Link className="nav-link" to="/">
+                  Inicio
+                </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link" to='/Items'>Items</Link>
+                <Link className="nav-link" to="/Items">
+                  Items
+                </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link" to='/Images'>Images</Link>
+                <Link className="nav-link" to="/Images">
+                  Images
+                </Link>
               </li>
               <li className="nav-item dropdown">
-              <Link className="nav-link" to='/Nosotros'>Nosotros</Link>
+                <Link className="nav-link" to="/Nosotros">
+                  Nosotros
+                </Link>
                 <ul
                   className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
@@ -56,6 +66,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
+          <CartWidget />
         </div>
       </nav>
     </div>
