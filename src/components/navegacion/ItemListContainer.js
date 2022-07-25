@@ -4,9 +4,9 @@ import React from 'react';
 
 function ItemListContainer({ greeting }) {
     return (
-        <div className='container mt-4'>
+        <div className='text-center'>
             <p>
-                {greeting}
+               <h1> {greeting}</h1>
             </p>
         </div>
     );

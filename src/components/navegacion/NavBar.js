@@ -1,15 +1,16 @@
 import React from "react";
+import '../../App.css';
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget"
-//import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const NavBar = () => {
   return (
-    <div>
+  
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar
+           Mi TiendA
           </a>
           <button
             className="navbar-toggler"
@@ -36,40 +37,20 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/Images">
-                  Images
+                  Catalogo
                 </Link>
               </li>
               <li className="nav-item dropdown">
                 <Link className="nav-link" to="/Nosotros">
                   Nosotros
                 </Link>
-                <ul
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
           <CartWidget />
         </div>
       </nav>
-    </div>
+   
   );
 };
 export default NavBar;
