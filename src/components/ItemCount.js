@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ItemCount = ({stock, initial}) =>{
+const ItemCount = ({stock, initial, onAdd}) =>{
     const [count, setCount] = useState(initial);
 
     const addCount = () => {
@@ -32,10 +32,10 @@ const ItemCount = ({stock, initial}) =>{
              <br/>
              <br/>
              <div>
-                 <button className="btn btn-outline-primary" variant= 'contrained' color="success"> Comprar </button>
+                 <button className="btn btn-outline-primary"  color="success" onClick={()=>onAdd(count)}> Comprar </button>
              </div>
          </div>
      )
 
 }
- export default ItemCount;
+ export default ItemCount
