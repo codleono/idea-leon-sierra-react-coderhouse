@@ -1,0 +1,49 @@
+{
+     "productos" : [
+  {
+    "id": "1",
+    "title": "POLERÓN",
+    "description": "POLERÓN MERRELL PARA HOMBRE JMS26534-353 AZUL",
+    "price": "50",
+    "pictureUrl":
+      "https://home.ripley.com.pe/Attachment/WOP_5/2020290818909/2020290818909_2.jpg",
+    "stock": 10
+  },
+  {
+    "id": "2",
+    "title": "POLERÓN ",
+    "description": "POLERÓN MERRELL PARA HOMBRE JMS26337-320 VERDE",
+    "price": "100",
+    "pictureUrl":
+      "https://home.ripley.com.pe/Attachment/WOP_5/2020290818657/2020290818657_2.jpg",
+    "stock": 10
+  },
+  {
+    "id": "3",
+    "title": "PANTALÓN",
+    "description": "PANTALÓN ESSENTIALS PLAIN TAPERED STANFORD",
+    "price": "150",
+    "pictureUrl":
+      "https://cdn.shopify.com/s/files/1/0881/3798/products/50019-ROMBOS-LEGGINS-FTE_1024x1024.jpg?v=1567917788",
+    "stock": 10
+  },
+  {
+    "id": "4",
+    "title": "BUZO CONJUNTO",
+    "description": "BUZO CONJUNTO HOMBRE ADIDAS ESSENTIALS 3 TIRAS PRIMEGREEN",
+    "price": "200",
+    "pictureUrl":
+      "https://home.ripley.com.pe/Attachment/WOP_5/2020263249099/2020263249099-1.jpg",
+    "stock": 10
+  },
+  {
+    "id": "5",
+    "title": "CASACA",
+    "description": "CASACA NIKE PARA HOMBRE DM6593-010 NEGRO",
+    "price": "550",
+    "pictureUrl":
+      "https://home.ripley.com.pe/Attachment/WOP_5/2020291554165/2020291554165_2.jpg",
+    "stock": 10
+  }
+]
+}

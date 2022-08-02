@@ -1,56 +1,25 @@
 import React from "react";
 import '../App.css';
-import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget"
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 
 const NavBar = () => {
   return (
-  
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-           Mi TiendA
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Inicio
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Items">
-                  Items
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Images">
-                  Catalogo
-                </Link>
-              </li>
-              <li className="nav-item dropdown">
-                <Link className="nav-link" to="/Nosotros">
-                  Nosotros
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <>
+      <Navbar bg="white" variant="white">
+        <Container>
+          <Navbar.Brand href="#home">Mi TieNda</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Inicio</Nav.Link>
+            <Nav.Link href="#features">Productos</Nav.Link>
+            <Nav.Link href="#pricing">Nosotros</Nav.Link>
+          </Nav>
           <CartWidget />
-        </div>
-      </nav>
-   
+        </Container>
+      </Navbar>
+    </>
   );
 };
 export default NavBar
