@@ -1,22 +1,34 @@
 
 import React, { useEffect, useState } from 'react';
-import { productosGet } from '../mocks/api';
-import ItemList from '../components/ItemList'
+import { productosGet, detalleProductoGet } from "../mocks/api";
+import ItemList from '../components/ItemList';
+import { useParams } from "react-router-dom";
 
 
 function ItemListContainer({ saludo }) {
 
-  const [listaProductos, setlistaProductos] = useState({});
+ const { id } = useParams();
 
-  useEffect(() => {
-    productosGet()
-      .then((resp) => {
-        setlistaProductos(resp);
-      })
-      .catch((error) => console.error(error));
-  }, []);
 
-  console.log({ listaProductos });
+ const [listaProductos, setListaProductos] = useState([]);
+
+ useEffect(() => {
+   if (id == null) {
+     productosGet()
+       .then((resp) => {
+         setListaProductos(resp);
+       })
+       .catch((error) => console.error(error));
+   } else {
+     detalleProductoGet(id)
+       .then((resp) => {
+         setListaProductos(resp);
+       })
+       .catch((error) => console.error(error));
+   }
+ }, [id]);
+
+ console.log({ listaProductos });
   return (
     <div className="text-center">
       <h1> {saludo}</h1>

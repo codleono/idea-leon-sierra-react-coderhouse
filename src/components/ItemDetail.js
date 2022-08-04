@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export const ItemDetail = ({data}) => {
-  const { id, title, description, price, pictureUrl, stock } = data;
+  const {title, description, price, pictureUrl, stock } = data;
   // cantidad del carrito
   const onAdd = (cantidad) => {
     setMensaje(`agregaste ${cantidad} Items en el carrito`);

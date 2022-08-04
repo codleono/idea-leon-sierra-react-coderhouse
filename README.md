@@ -1,3 +1,21 @@
+
+### TIENDA ECOMMERCE
+
+### `npm audit fix` 
+para falla de errores 
+
+### `npm run api`
+corre la api de los productos
+
+### `npm install`
+ cuando descargas el repo en otra maquina, se tiene que volver a installar las dependencias con npm install
+
+### gif del proyecto
+ ![Alt Text](https://gfycat.com/hopefulwigglyleafhopper)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +86,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
