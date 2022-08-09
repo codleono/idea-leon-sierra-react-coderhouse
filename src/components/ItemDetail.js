@@ -1,15 +1,22 @@
-import React from 'react'
 import ItemCount from './ItemCount';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const ItemDetail = ({data}) => {
   const {title, description, price, pictureUrl, stock } = data;
+  const [count, setCount] = useState(0);
+  const [compra, setCompra] = useState(false);
+
+
   // cantidad del carrito
-  const onAdd = (cantidad) => {
-    setMensaje(`agregaste ${cantidad} Items en el carrito`);
+  const onAdd = () => {
+    setCompra(true);  
+    
   };
+  const navigate = useNavigate()
   return (
     <Row>
       <Col col-4>
@@ -33,13 +40,24 @@ export const ItemDetail = ({data}) => {
             <strong>Precio: </strong>$ {price}
           </p>
           <p className="card-text">
-            <strong>Stock: </strong>{stock}
+            <strong>Stock: </strong>
+            {stock}
           </p>
           <p className="card-text">
             <strong>Cantidad:</strong>
           </p>
         </div>
-        <ItemCount stock={10} initial={1} onAdd={onAdd} />
+        {compra ? (
+          <button onClick={() => navigate("/carrito")}>Ir a carrito</button>
+        ) : (
+          <ItemCount
+            stock={10}
+            initial={1}
+            onAdd={onAdd}
+            count={count}
+            setCount={setCount}
+          />
+        )}
       </Col>
     </Row>
   );

@@ -1,17 +1,34 @@
-
+![Alt Text](https://gfycat.com/hopefulwigglyleafhopper)
+### gif del proyecto
 ### TIENDA ECOMMERCE
-
-### `npm audit fix` 
-para falla de errores 
 
 ### `npm run api`
 corre la api de los productos
+npm run api
 
 ### `npm install`
  cuando descargas el repo en otra maquina, se tiene que volver a installar las dependencias con npm install
 
+##  Resources
+
+## http://localhost:3030/categorias
+
+## http://localhost:3030/productos
+
+## Home
+
+## http://localhost:3030
+
+## API
+npm run api
+
+### `npm audit fix` 
+para falla de errores 
+
+
+
 ### gif del proyecto
- ![Alt Text](https://gfycat.com/hopefulwigglyleafhopper)
+![Alt Text](https://gfycat.com/hopefulwigglyleafhopper)
 
 
 
