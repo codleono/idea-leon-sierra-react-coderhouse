@@ -5,6 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Contact from './components/Contact';
 import Carrito from './components/Carrito';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from './components/context/cartContext';
 
 
 
@@ -12,7 +13,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <div className="App">
+    <CartProvider>
+       <div className="App">
         <BrowserRouter>
           <NavBar />
           <section className="center">
@@ -28,7 +30,9 @@ function App() {
             </Routes>
           </section>
         </BrowserRouter>
-      </div>
+      </div> 
+    </CartProvider>
+      
     </>
   );
 }

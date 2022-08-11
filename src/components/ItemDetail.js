@@ -2,20 +2,34 @@ import ItemCount from './ItemCount';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../components/context/cartContext";
 
 export const ItemDetail = ({data}) => {
+  const { addItem } = useContext(CartContext);
   const {title, description, price, pictureUrl, stock } = data;
   const [count, setCount] = useState(0);
   const [compra, setCompra] = useState(false);
 
 
   // cantidad del carrito
-  const onAdd = () => {
-    setCompra(true);  
-    
+   const onAdd = () => {
+    let productoNuevo = {
+      id: data.id,
+      title: data.title,
+      description: data.description,
+      price: data.price,
+      pictureUrl: data.pictureUrl,
+      stock: data.stock,
+      cantidad: count
+    };
+
+    setCompra(true);
+    addItem(productoNuevo);
   };
+
+
   const navigate = useNavigate()
   return (
     <Row>
@@ -48,7 +62,12 @@ export const ItemDetail = ({data}) => {
           </p>
         </div>
         {compra ? (
-          <button onClick={() => navigate("/carrito")}>Ir a carrito</button>
+          <button
+            className="btn btn-success"
+            onClick={() => navigate("/carrito")}
+          >
+            Ir a carrito
+          </button>
         ) : (
           <ItemCount
             stock={10}
