@@ -66,7 +66,7 @@ export const ItemDetail = ({data}) => {
             className="btn btn-success"
             onClick={() => navigate("/carrito")}
           >
-            Ir a carrito
+            Terminar compra
           </button>
         ) : (
           <ItemCount
