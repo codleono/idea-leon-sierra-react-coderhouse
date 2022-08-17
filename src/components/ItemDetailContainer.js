@@ -4,6 +4,8 @@ import ItemDetail  from './ItemDetail';
 import {useState, useEffect} from 'react';
 import { detalleProductoGet } from "../mocks/api";
 import { useParams } from "react-router-dom";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/Firebase";
 
 
 
@@ -14,13 +16,22 @@ export const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    detalleProductoGet(id)
-      .then((resp) => {
-        setData(
-          resp.filter((producto) => parseInt(producto.id) == parseInt(id))[0]
-        );
+    //Le decimos nuestra base de datos y en que colección esta
+    const collecionProductos = collection(db, "productos");
+    //La referencia de que tiene que traer (id)
+    const referenciaDoc = doc(collecionProductos, id);
+    //Traemos un solo documento
+    getDoc(referenciaDoc)
+      .then((result) => {
+        setData({
+          id: result.id,
+          ...result.data(),
+        });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.log({ error });
+      })
+      
   }, [id]);
 
 

@@ -5,15 +5,29 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { getCategoria } from "../mocks/api";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { db } from "../firebase/Firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 const NavBar = () => {
 
   const [categorias, setCategorias] = useState([]);
 
+ 
   useEffect(() => {
-    getCategoria().then((resp) => {
-      setCategorias(resp);
-    });
+    const q = collection(db, "categorias");
+    getDocs(q)
+      .then((result) => {
+        console.log({ result });
+        const lista = result.docs.map((categoria) => {
+          return {
+            id: categoria.id,
+            ...categoria.data(),
+          };
+        });
+        console.log({ lista });
+        setCategorias(lista);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (

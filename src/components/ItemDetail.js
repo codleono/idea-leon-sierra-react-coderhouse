@@ -1,10 +1,12 @@
 import ItemCount from './ItemCount';
+import App from "../../src/App"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../components/context/cartContext";
+import Button from "react-bootstrap/Button";
 
 export const ItemDetail = ({data}) => {
   const { addItem } = useContext(CartContext);
@@ -57,17 +59,26 @@ export const ItemDetail = ({data}) => {
             <strong>Stock: </strong>
             {stock}
           </p>
-          <p className="card-text">
-            <strong>Cantidad:</strong>
-          </p>
+          
         </div>
         {compra ? (
-          <button
-            className="btn btn-success"
-            onClick={() => navigate("/carrito")}
-          >
-            Terminar compra
-          </button>
+          <>
+            
+            <button
+              className="btn btn-primary "
+              onClick={() => navigate("/carrito")}
+            >
+              Ir al Carrito
+            </button>
+            {"   "}
+
+            <button
+              className="btn btn-success "
+              onClick={() => navigate("/")}
+            >
+              Seguir Comprando
+            </button>
+          </>
         ) : (
           <ItemCount
             stock={10}
