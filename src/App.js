@@ -6,7 +6,7 @@ import Contact from './components/Contact';
 import Carrito from './components/Carrito';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from './components/context/cartContext';
-
+import Checkout from "./components/Checkout";
 
 
 
@@ -27,6 +27,7 @@ function App() {
               <Route path="/producto/:id" element={<ItemDetailContainer />} />
               <Route path="/contacto" element={<Contact />} />
               <Route path="/carrito" element={<Carrito />} />
+              <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </section>
         </BrowserRouter>

@@ -47,7 +47,7 @@ import {useNavigate} from "react-router-dom";
                     {precioTotal()}
                   </td>
                   <td>
-                      <button className="btn btn-primary">Finalizar Compra</button>
+                      <button className="btn btn-primary" onClick={()=> navigate("/checkout")}>Finalizar Compra</button>
                   </td>
                 </tr>
                 <button className="btn btn-danger" onClick={() => clear()}>
