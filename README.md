@@ -1,10 +1,10 @@
-![Alt Text](https://gfycat.com/hopefulwigglyleafhopper)
+
 ### gif del proyecto
 ### TIENDA ECOMMERCE
+### PROYECTO FINAL
 
-### `npm run api`
-corre la api de los productos
-npm run api
+![Alt Text](https://thumbs.gfycat.com/GlisteningAmbitiousEmperorpenguin-size_restricted.gif)
+
 
 ### `npm install`
  cuando descargas el repo en otra maquina, se tiene que volver a installar las dependencias con npm install
